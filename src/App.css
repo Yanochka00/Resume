@@ -158,10 +158,11 @@ p {
 
 .image-description {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center; /* Центрирование содержимого */
     margin-top: 10px;
     color: #555;
+    text-align: center; /* Центрирование текста */
 }
 
 .image-description h3 {
@@ -172,17 +173,7 @@ p {
 .image-description p {
     font-size: 0.9em;
     color: #666;
-    margin: 0 10px;
-}
-
-.image-description a {
-    margin-left: auto;
-    text-decoration: none;
-    color: #007bff;
-}
-
-.image-description a:hover {
-    text-decoration: underline;
+    margin: 5px 0;
 }
 
 ul {
@@ -192,7 +183,10 @@ ul {
     padding: 10px;
     list-style-type: none;
 }
-
+.image-description
+{
+    padding: 3px;
+}
 li {
     flex: 1 1 300px;
     border: 1px solid #99989d;
@@ -200,4 +194,28 @@ li {
     padding: 15px;
     background: #f9f9f9;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid #353738;
+    text-decoration: none; /* Убираем подчеркивание по умолчанию */
+}
+
+.github-button {
+    display: inline-block;
+    padding: 10px 15px;
+    color: rgb(85, 151, 250);
+    border-radius: 5px;
+    text-decoration: none; /* Убираем подчеркивание по умолчанию */
+    transition: background-color 0.3s;
+    border: 1px solid #353738;
+    margin-left: 20px; 
+}
+.github-button:hover {
+    text-decoration: underline; /* Добавляем нижнее подчеркивание при наведении */
+    color: rgb(71, 73, 73); /* Меняем цвет текста на aqua при наведении */
 }

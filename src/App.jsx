@@ -31,7 +31,6 @@ const App = () => {
             description:
                 'A task management application designed to help users efficiently create, organize, and track their tasks. Used: React, CSS, HTML',
             githubLink: 'https://github.com/Yanochka00/To-do.git',
-
             images: [{ src: 'img/to_do.png', alt: 'To Do project image', title: 'Link to Git' }],
         },
     ];
@@ -43,20 +42,20 @@ const App = () => {
                     <h1>Grigoreva Yana</h1>
                     <div className="contact-info">
                         <p>
-                            <a1>Email: </a1>
-                            <a class="email" href="mailto:yana100500yana@gmail.com">
+                            <strong>Email:</strong>
+                            <a className="email" href="mailto:yana100500yana@gmail.com">
                                 yana100500yana@gmail.com
                             </a>
                         </p>
                         <p>
-                            <a1> Telegram: </a1>
-                            <a class="telegram" href="https://t.me/Yaanochka_00">
+                            <strong>Telegram:</strong>
+                            <a className="telegram" href="https://t.me/Yaanochka_00">
                                 Yana
                             </a>
                         </p>
                         <p>
-                            <a1> GitHub: </a1>
-                            <a class="GitHub" href="https://github.com/Yanochka00">
+                            <strong>GitHub:</strong>
+                            <a className="GitHub" href="https://github.com/Yanochka00">
                                 Yanochka00
                             </a>
                         </p>
@@ -100,15 +99,18 @@ const App = () => {
                                                 className="small-image"
                                             />
                                             <div className="image-description">
-                                                <h3>{project.title}</h3>
+                                                <h3>
+                                                    <a className="project-title">{project.title}</a>
+                                                    <a
+                                                        href={project.githubLink}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="github-button"
+                                                    >
+                                                        {image.title}
+                                                    </a>
+                                                </h3>
                                                 <p>{project.description}</p>
-                                                <a
-                                                    href={project.githubLink}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    {image.title}
-                                                </a>
                                             </div>
                                         </div>
                                     </section>
