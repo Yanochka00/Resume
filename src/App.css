@@ -143,16 +143,19 @@ p {
     justify-content: center;
     gap: 20px;
     margin: 20px 0;
+    flex-wrap: wrap; /* Позволяет обтекать изображения */
 }
 
 .image-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
+    width: 100%; /* Занимает 100% ширины при мобильных экранах */
 }
 
 .small-image {
-    width: 100%;
+    width: 100%; /* Изображение будет занимать 100% ширины контейнера */
+    max-width: 300px; /* Ограничение ширины для больших экранов */
     object-fit: cover;
 }
 
@@ -183,10 +186,7 @@ ul {
     padding: 10px;
     list-style-type: none;
 }
-.image-description
-{
-    padding: 3px;
-}
+
 li {
     flex: 1 1 300px;
     border: 1px solid #99989d;
@@ -215,7 +215,21 @@ li {
     border: 1px solid #353738;
     margin-left: 20px; 
 }
+
 .github-button:hover {
     text-decoration: underline; 
     color: rgb(71, 73, 73); 
+}
+
+/* Медиа-запрос для адаптивности */
+@media (max-width: 768px) {
+    .image-section {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .small-image {
+        max-width: 100%; 
+        margin-top: 10px; 
+    }
 }
