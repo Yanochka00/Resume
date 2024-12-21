@@ -56,7 +56,7 @@ const App = () => {
                         <p>
                             <a1> GitHub: </a1>
                             <a class="GitHub" href="https://github.com/Yanochka00">
-                                Yanochka00
+                                соня
                             </a>
                         </p>
                     </div>
