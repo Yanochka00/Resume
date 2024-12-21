@@ -31,9 +31,7 @@ const App = () => {
             description:
                 'A task management application designed to help users efficiently create, organize, and track their tasks. Used: React, CSS, HTML',
             githubLink: 'https://github.com/Yanochka00/To-do.git',
-            images: [
-                { src: 'public/img/to_do.png', alt: 'To Do project image', title: 'Link to Git' },
-            ],
+            images: [{ src: 'img/to_do.png', alt: 'To Do project image', title: 'Link to Git' }],
         },
     ];
 
